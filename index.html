@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Ebook Gratuito - Crucifixo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📖 Como Escolher um Bom Crucifixo</h1>
+    <p>Preencha os dados e receba o PDF gratuito.</p>
+
+    <form id="form">
+      <input type="text" id="nome" placeholder="Seu nome" required>
+      <input type="email" id="email" placeholder="Seu e-mail" required>
+      <input type="text" id="celular" placeholder="Seu celular (opcional)">
+      <button type="submit">Enviar</button>
+    </form>
+
+    <div id="download" style="display:none; margin-top:20px;">
+      <h3>✅ Obrigado!</h3>
+      <a href="crucifixo.pdf" download>📥 Baixar PDF</a>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("form").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const nome = document.getElementById("nome").value;
+      const email = document.getElementById("email").value;
+      const celular = document.getElementById("celular").value;
+
+      // Recupera cadastros anteriores do localStorage
+      let cadastros = JSON.parse(localStorage.getItem("cadastros")) || [];
+
+      // Adiciona novo cadastro
+      cadastros.push({ nome, email, celular });
+
+      // Salva de volta no localStorage
+      localStorage.setItem("cadastros", JSON.stringify(cadastros));
+
+      // Mostra link de download do PDF
+      document.getElementById("download").style.display = "block";
+
+      // Limpa o formulário
+      document.getElementById("form").reset();
+    });
+  </script>
+</body>
+</html>
