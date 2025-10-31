@@ -1,0 +1,338 @@
+/* Importação da Fonte Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Reset básico */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #f8f8f8;
+}
+img { max-width: 100%; display: block; border-radius: 10px; }
+
+/* Containers */
+.container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+h1 {
+  font-weight: 700;
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+  color: #2c2c2c;
+  line-height: 1.1;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #2c2c2c;
+}
+
+/* Botões */
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 10px;
+  background: #3D2323;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.btn:hover { background: #7a0000; }
+
+/* Hero */
+.hero { background: #f8f8f8; text-align: center; padding: 60px 20px; }
+.hero img { margin: 20px auto; max-height: 400px; }
+
+/* Grid */
+.grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+
+/* Cards */
+.card { background: #fafafa; padding: 20px; border-radius: 12px; text-align: center; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+
+/* Testimonials */
+.testimonials blockquote {
+  background: #f1f1f1;
+  padding: 20px;
+  border-radius: 12px;
+  font-style: italic;
+}
+.testimonials cite { display: block; margin-top: 10px; font-style: normal; font-weight: bold; }
+
+/* FAQ */
+.faq-item { border-bottom: 1px solid #ddd; margin-bottom: 10px; }
+.faq-question {
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font-size: 1rem;
+  padding: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0 15px;
+}
+.faq-item.active .faq-answer { max-height: 200px; padding: 15px; }
+
+/* CTA */
+.cta { background: #f8f8f8; text-align: center; padding: 60px 20px; }
+.cta h2 { margin-bottom: 20px; }
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #2c2c2c;
+}
+
+p {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* --- Botão --- */
+.btn {
+  display: inline-block;
+  padding: 16px 40px;
+  background-color: #FFC107;
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 50px; /* Borda bem arredondada */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btnP {
+  display: inline-block;
+  padding: 16px 40px;
+  background-color: #3D2323;
+  color: #FFC107;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 12px; /* Borda bem arredondada */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn:hover {
+  background-color: #FFD54F;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+/* --- Seções e Layout --- */
+.testimonials, .main-cta, .benefits-icons {
+  padding: 80px 0;
+}
+
+/* --- Depoimentos (Seção "O que dizem nossos clientes") --- */
+.testimonials {
+  background-color: #fff;
+}
+
+.testimonials-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap; /* Garante que os cards se quebrem em telas menores */
+}
+
+.testimonial-card {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  max-width: 400px;
+  text-align: left;
+}
+
+.testimonial-card p {
+  font-style: italic;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.testimonial-card cite {
+  display: block;
+  font-style: normal;
+  font-weight: 400;
+  color: #888;
+}
+/* --- Seção de CTA Principal (Meio da página) --- */
+.main-cta {
+  background-color: #f5f5f5;
+}
+
+.main-cta h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+/* --- Seção de Ícones (Rodapé) --- */
+.benefits-icons {
+  background-color: #3D2323;
+  padding: 40px 0;
+}
+
+.icons-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+  color: #f1f1f1;
+  padding: 20px 0;
+  border-top: 1px solid #eee;
+}
+
+@media (max-width: 768px) {
+  .testimonials-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* --- Diferenciais que fazem a diferença --- */
+/* --- Diferenciais --- */
+.differences {
+  background-color: #fff;
+  padding: 60px 0;
+}
+
+.differences h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #111;
+}
+
+.differences-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px 60px;
+}
+
+.difference-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.difference-item .icon {
+  font-size: 1.8rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.difference-item p {
+  margin: 0;
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+.difference-item strong {
+  color: #222;
+  font-weight: 600;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .differences-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+
+.icons-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+    color: #f1f1f1;
+    padding: 20px 0;
+    border-top: 1px solid #eee;
+}
+
+/* --- Responsividade para a seção de diferenciais --- */
+@media (max-width: 768px) {
+  .differences-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+  .difference-item {
+    text-align: center;
+  }
+}
+
+/* --- Seção Sobre o Crucifixo --- */
+.about-crucifix {
+  background-color: #d4d3d3;
+  padding: 60px 0;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  color: #111;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+  max-width: 500px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-text p {
+    margin: 0 auto;
+  }
+}
